@@ -513,31 +513,34 @@ class ViewCV extends StatelessWidget {
   Widget build(BuildContext context) {
     return //Content
         Container(
-      width: 650.0,
-      margin: EdgeInsets.symmetric(vertical: 50.0),
+      width: SizeConfig.blockHorizontal * 50,
+      margin:
+          EdgeInsets.symmetric(horizontal: SizeConfig.blockHorizontal * 3.57),
       child: Column(
         children: [
           // Desc Project
           Column(
             children: [
+              SizedBox(height: SizeConfig.blockVertical * 3),
               //Title Project
               Text(
                 'ABOUT ME',
-                style: bodyBold.copyWith(fontSize: 48.0),
+                style: bodyBold.copyWith(
+                    fontSize: SizeConfig.blockHorizontal * 3.46),
               ),
-              SizedBox(height: 24.0),
+              SizedBox(height: SizeConfig.blockVertical * 1.5),
               //description Project
               Text(
                 'Download My CV to know more about me',
                 style: bodyRegular.copyWith(color: lightBlue2),
               ),
-              SizedBox(height: 60.0),
+              SizedBox(height: SizeConfig.blockVertical * 4.06),
             ],
           ),
           //Image Project
           Container(
-            width: 650.0,
-            height: 922.0,
+            width: SizeConfig.blockHorizontal * 50,
+            height: SizeConfig.blockVertical * 65.86,
             decoration: BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.cover,
@@ -558,10 +561,10 @@ class ViewCV extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 80.0),
+          SizedBox(height: SizeConfig.blockVertical * 5.71),
           //Button View Project
           SizedBox(
-            width: 650.0,
+            width: SizeConfig.blockHorizontal * 50,
             child: YellowButton('DOWNLOAD CV', () async {
               await openUrl('https://github.com/nathdhim');
             }),

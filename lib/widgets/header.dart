@@ -6,20 +6,25 @@ import 'package:portfolio_web/widgets/buttons_menu.dart';
 class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Container(
-      width: double.infinity,
-      padding: EdgeInsets.symmetric(horizontal: 120, vertical: 10),
+      width: SizeConfig.screenWidhth,
+      padding: EdgeInsets.symmetric(
+          horizontal: SizeConfig.blockHorizontal * 8.57,
+          vertical: SizeConfig.blockHorizontal * 0.71),
       child: Row(
         children: [
           // Logo
           SvgPicture.asset(
             "assets/svg/logo.svg",
-            width: 120.0,
+            width: SizeConfig.blockHorizontal * 8.57,
           ),
-          SizedBox(width: 220.0),
+          SizedBox(width: SizeConfig.blockHorizontal * 15.71),
           // Menu
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 35.0, vertical: 10.0),
+            padding: EdgeInsets.symmetric(
+                horizontal: SizeConfig.blockHorizontal * 2.5,
+                vertical: SizeConfig.blockHorizontal * 0.71),
             decoration: BoxDecoration(
                 color: lightBlue,
                 borderRadius: BorderRadius.circular(50),
@@ -28,11 +33,11 @@ class Header extends StatelessWidget {
               children: [
                 HomeButton(),
                 SizedBox(
-                  width: 40.0,
+                  width: SizeConfig.blockHorizontal * 2.86,
                 ),
                 ProjectButton(),
                 SizedBox(
-                  width: 40.0,
+                  width: SizeConfig.blockHorizontal * 2.86,
                 ),
                 AboutButton(),
               ],
@@ -48,12 +53,12 @@ class Header extends StatelessWidget {
                 InstaButton(() async {
                   await openUrl('https://www.instagram.com/nath.dhim/');
                 }),
-                SizedBox(width: 20.0),
+                SizedBox(width: SizeConfig.blockHorizontal * 1.43),
                 //logo github
                 GithubButton(() async {
                   await openUrl('https://github.com/nathdhim');
                 }),
-                SizedBox(width: 20.0),
+                SizedBox(width: SizeConfig.blockHorizontal * 1.43),
                 //logo dribbble
                 DribbbleButton(() async {
                   await openUrl('https://dribbble.com/nathdhim');

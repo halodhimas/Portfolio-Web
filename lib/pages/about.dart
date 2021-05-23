@@ -25,7 +25,7 @@ class _AboutPageState extends State<AboutPage> {
         body: Container(
           decoration:
               BoxDecoration(border: Border.all(color: white, width: 10.0)),
-          padding: EdgeInsets.only(bottom: 40.0),
+          padding: EdgeInsets.only(bottom: SizeConfig.blockVertical * 2.86),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hovering/hovering.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:portfolio_web/pages/about%20me/about.dart';
-import 'package:portfolio_web/pages/project/hero.dart';
-import 'package:portfolio_web/pages/project/project.dart';
+import 'package:portfolio_web/pages/about.dart';
+import 'package:portfolio_web/pages/project.dart';
+import 'package:portfolio_web/pages/hero.dart';
 import 'package:portfolio_web/shared.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -33,9 +33,11 @@ class HomeButton extends StatelessWidget {
         Navigator.push(context,
             PageTransition(child: HeroPage(), type: PageTransitionType.fade));
       },
-      child: const Text(
+      child: Text(
         'HOME',
-        style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+        style: TextStyle(
+            fontSize: SizeConfig.blockHorizontal * 1.32,
+            fontWeight: FontWeight.w700),
       ),
     );
   }
@@ -66,9 +68,11 @@ class ProjectButton extends StatelessWidget {
         Navigator.push(context,
             PageTransition(child: ProPage(), type: PageTransitionType.fade));
       },
-      child: const Text(
+      child: Text(
         'PROJECT',
-        style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+        style: TextStyle(
+            fontSize: SizeConfig.blockHorizontal * 1.32,
+            fontWeight: FontWeight.w700),
       ),
     );
   }
@@ -99,9 +103,11 @@ class AboutButton extends StatelessWidget {
         Navigator.push(context,
             PageTransition(child: AboutPage(), type: PageTransitionType.fade));
       },
-      child: const Text(
+      child: Text(
         'ABOUT ME',
-        style: TextStyle(fontSize: 18, fontWeight: FontWeight.w700),
+        style: TextStyle(
+            fontSize: SizeConfig.blockHorizontal * 1.32,
+            fontWeight: FontWeight.w700),
       ),
     );
   }
@@ -113,14 +119,15 @@ class InstaButton extends StatelessWidget {
   InstaButton(this._onTap);
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return GestureDetector(
       onTap: _onTap,
       child: HoverCrossFadeWidget(
           firstChild: Container(
-              width: 65.0,
+              width: SizeConfig.blockHorizontal * 4.64,
               child: Image(image: AssetImage('img/instagram.png'))),
           secondChild: Container(
-              width: 65.0,
+              width: SizeConfig.blockHorizontal * 4.64,
               child: Image(image: AssetImage('img/instagram-active.png'))),
           duration: Duration(milliseconds: 100)),
     );
@@ -132,13 +139,15 @@ class GithubButton extends StatelessWidget {
   GithubButton(this._onTap);
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return GestureDetector(
       onTap: _onTap,
       child: HoverCrossFadeWidget(
           firstChild: Container(
-              width: 65.0, child: Image(image: AssetImage('img/github.png'))),
+              width: SizeConfig.blockHorizontal * 4.64,
+              child: Image(image: AssetImage('img/github.png'))),
           secondChild: Container(
-              width: 65.0,
+              width: SizeConfig.blockHorizontal * 4.64,
               child: Image(image: AssetImage('img/github-active.png'))),
           duration: Duration(milliseconds: 100)),
     );
@@ -150,13 +159,15 @@ class DribbbleButton extends StatelessWidget {
   DribbbleButton(this._onTap);
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return GestureDetector(
       onTap: _onTap,
       child: HoverCrossFadeWidget(
           firstChild: Container(
-              width: 65.0, child: Image(image: AssetImage('img/dribbble.png'))),
+              width: SizeConfig.blockHorizontal * 4.64,
+              child: Image(image: AssetImage('img/dribbble.png'))),
           secondChild: Container(
-              width: 65.0,
+              width: SizeConfig.blockHorizontal * 4.64,
               child: Image(image: AssetImage('img/dribbble-active.png'))),
           duration: Duration(milliseconds: 100)),
     );

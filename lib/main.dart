@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_web/pages/project/hero.dart';
+import 'package:portfolio_web/pages//hero.dart';
 
 void main() {
   runApp(MyApp());
