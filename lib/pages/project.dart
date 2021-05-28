@@ -30,29 +30,31 @@ class _ProPageState extends State<ProPage> {
           decoration:
               BoxDecoration(border: Border.all(color: white, width: 10.0)),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Header(),
               Expanded(
                 child: Container(
-                  width: double.infinity,
-                  height: double.infinity,
+                  padding: EdgeInsets.all(0),
                   child: ListView(
                     controller: _controller,
                     children: [
-                      SizedBox(height: 20.0),
-                      YukyContent(),
-                      SizedBox(height: 120.0),
-                      ArioContent(),
-                      SizedBox(height: 120.0),
-                      DhimasWebsite(),
-                      SizedBox(height: 120.0),
-                      BwaContent(),
-                      SizedBox(height: 120.0),
-                      PinjambukuContent(),
-                      SizedBox(height: 120.0),
-                      MyShopyContent(),
-                      SizedBox(height: 50.0),
+                      SizedBox(height: SizeConfig.blockVertical * 1.43),
+                      Content(
+                        'img/yuky-1.png',
+                        'img/yuky-2.png',
+                        'BRANDING & UI DESIGN',
+                        'YUKY PLAY',
+                        'Yuky is a web-based e-learning \napplication that is fun to play',
+                      ),
+                      SizedBox(height: SizeConfig.blockVertical * 8.57),
+                      Content(
+                        'img/ario-1.png',
+                        'img/ario-2.png',
+                        'BRANDING DESIGN',
+                        'ARIO',
+                        'Ario is a startup engaged in\nAI and AR technology in Indonesia.',
+                      ),
+                      SizedBox(height: SizeConfig.blockVertical * 8.57),
                     ],
                   ),
                 ),

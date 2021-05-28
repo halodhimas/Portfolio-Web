@@ -32,8 +32,8 @@ class _AboutPageState extends State<AboutPage> {
               Header(),
               Expanded(
                 child: Container(
-                  width: double.infinity,
-                  height: double.infinity,
+                  width: SizeConfig.screenWidhth,
+                  height: SizeConfig.screenHeight,
                   child: ListView(
                     controller: _controller,
                     children: [ViewCV()],

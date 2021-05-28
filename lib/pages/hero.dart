@@ -35,7 +35,7 @@ class _HeroPageState extends State<HeroPage> {
                 children: [
                   Image(
                     image: AssetImage('img/design.png'),
-                    width: SizeConfig.blockHorizontal * 26.20,
+                    width: SizeConfig.blockHorizontal * 25.8,
                   ),
                   SizedBox(width: SizeConfig.blockHorizontal * 1.71),
                   Image(
